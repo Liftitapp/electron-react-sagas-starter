@@ -73,7 +73,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johanetox/electron-react-sagas-starter.git"
+    "url": "git+https://github.com/Liftitapp/electron-react-sagas-starter.git"
   },
   "author": {
     "name": "C. T. Lin",
@@ -82,7 +82,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/johanetox/electron-react-sagas-starter/issues"
+    "url": "https://github.com/Liftitapp/electron-react-sagas-starter/issues"
   },
   "keywords": [
     "electron",
@@ -95,7 +95,7 @@
     "hot",
     "reload"
   ],
-  "homepage": "https://github.com/johanetox/electron-react-sagas-starter#readme",
+  "homepage": "https://github.com/Liftitapp/electron-react-sagas-starter#readme",
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/fileMock.js",

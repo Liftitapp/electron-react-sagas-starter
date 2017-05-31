@@ -1,6 +1,6 @@
 # electron-react-sagas-starter
 
-### An actual work from [chentsulin/electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate) + sagas, stateless, immutable
+### An actual work from [chentsulin/electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate) + sagas, immutable and stateless components
 
 <br/>
 
@@ -31,7 +31,7 @@ application boilerplate based on
 First, clone the repo via git:
 
 ```bash
-git clone --depth=1 https://github.com/johanetox/electron-react-sagas-starter.git your-project-name
+git clone --depth=1 https://github.com/Liftitapp/electron-react-sagas-starter.git your-project-name
 ```
 
 And then install dependencies.
@@ -171,10 +171,7 @@ $ npm run test-e2e
 
 1. Clean up lint
 2. Improve eslint config
-3. Reducers testing missing
-4. Finish implementing immutable-js
-5. Testing missing at reducers and invoices component
-6. Add some love to the table with [sematable](https://github.com/sematext/sematable)
+3. Saga testing missing
 
 ## License
 MIT ©
