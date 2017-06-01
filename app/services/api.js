@@ -5,7 +5,7 @@ const create = (baseURL = 'https://api.myjson.com') => {
     baseURL
   })
   const invoices = () =>
-    api.get('/bins/uw3dd')
+    api.get('/bins/17rjs9')
   return {
     invoices
   }

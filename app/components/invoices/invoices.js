@@ -3,6 +3,13 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import numeral from 'numeral'
 import moment from 'moment'
+import sematable from 'sematable'
+import PdfViewer from 'components/pdf/pdf_viewer'
+
+const columns = [
+  { key: 'id', header: 'ID', searchable: true, sortable: true, primaryKey: true },
+  { key: 'inserted_at', header: 'Name', searchable: true, sortable: true },
+]
 
 const textHeaders = [
   'UUID', 'Factura', 'Fecha', 'Cliente', 'Operador', 'Tipo', 'Valor', 'PDF Cliente', 'PDF Operador']
@@ -36,10 +43,10 @@ const Invoices = ({ data, getInvoices }) => (
             <td>{invoice.service.type}</td>
             <td>{numeral(invoice.service.price).format('$0,0')}</td>
             <td>
-              <Link to={invoice.customer.pdf_link}>
+              <Link to='/pdf'>
                 <i className="fa fa-arrow-down fa-1x" />
               </Link></td>
-            <td><Link to={invoice.worker.pdf_link}>
+            <td><Link to='/pdf'>
               <i className="fa fa-arrow-down fa-1x" />
             </Link></td>
           </tr>
@@ -58,4 +65,4 @@ Invoices.defaultProps = {
   getInvoices: () => {}
 }
 
-export default Invoices
+export default sematable('allApps', Invoices, columns)
