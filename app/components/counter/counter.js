@@ -2,24 +2,21 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import styles from './counter.css'
+import CounterButton from './counter_button'
 
 const Counter = ({ decrementCounter, incrementCounter, counter }) => (
   <div>
-    <div className={styles.backButton} data-tid="backButton">
-      <Link to="/">
-        <i className="fa fa-arrow-left fa-3x" />
+    <div className={styles.backButton} data-tid='backButton'>
+      <Link to='/'>
+        <i className='fa fa-arrow-left fa-3x' />
       </Link>
     </div>
-    <div className={`counter ${styles.counter}`} data-tid="counter">
+    <div className={`counter ${styles.counter}`} data-tid='counter'>
       {counter}
     </div>
     <div className={styles.btnGroup}>
-      <button className={styles.btn} onClick={incrementCounter} data-tclass="btn">
-        <i className="fa fa-plus" />
-      </button>
-      <button className={styles.btn} onClick={decrementCounter} data-tclass="btn">
-        <i className="fa fa-minus" />
-      </button>
+      <CounterButton onClick={incrementCounter} counterIcon='fa-plus' />
+      <CounterButton onClick={decrementCounter} counterIcon='fa-minus' />
     </div>
   </div>
 )
