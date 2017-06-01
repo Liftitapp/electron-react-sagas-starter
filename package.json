@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "description": "Electron starter kit based on React, React redux, Redux Saga, React Router, Immutable, stateless, Webpack 2, React Hot Loader for rapid development",
   "scripts": {
-    "test": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 node --trace-warnings ./test/runTests.js",
+    "test": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 node --trace-warnings ./test/runTests.js && ava",
     "test-all": "npm run lint && npm run flow && npm run test && npm run build && npm run test-e2e",
     "test-watch": "npm test -- --watch",
     "test-e2e": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 node --trace-warnings ./test/runTests.js e2e",
@@ -114,6 +114,7 @@
   },
   "devDependencies": {
     "asar": "^0.13.0",
+    "ava": "^0.19.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.1",
@@ -189,6 +190,7 @@
   },
   "dependencies": {
     "apisauce": "^0.13.0",
+    "ava": "^0.19.1",
     "electron-debug": "^1.1.0",
     "font-awesome": "^4.7.0",
     "history": "^4.6.1",

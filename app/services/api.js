@@ -1,6 +1,4 @@
 import apisauce from 'apisauce'
-import { put } from 'redux-saga/effects'
-import InvoicesActions from 'reducers/invoices_redux'
 
 const create = (baseURL = 'https://api.myjson.com') => {
   const api = apisauce.create({

@@ -8,21 +8,21 @@
 
 <br/>
 
-application boilerplate based on
-[Electron](http://electron.atom.io/)
-[React](https://facebook.github.io/react/)
-[Webpack 2](https://webpack.github.io/)
-[Redux](http://redux.js.org/)
-[React Router](https://github.com/ReactTraining/react-router)
-[Flow](https://flowtype.org/)
-[ESLint](http://eslint.org/)
-[Jest](https://facebook.github.io/jest/)
-[Yarn](https://yarnpkg.com/)
-[React Transform HMR](https://github.com/gaearon/react-transform-hmr)
-[Apisauce](https://github.com/skellock/apisauce)
-[Redux Saga](https://github.com/redux-saga/redux-saga)
-[Immutable](https://github.com/facebook/immutable-js)
-[css-modules](https://github.com/css-modules/css-modules)
+Application boilerplate based on
+* [Electron](http://electron.atom.io/)
+* [React](https://facebook.github.io/react/)
+* [Webpack 2](https://webpack.github.io/)
+* [Redux](http://redux.js.org/)
+* [React Router](https://github.com/ReactTraining/react-router)
+* [Flow](https://flowtype.org/)
+* [ESLint](http://eslint.org/)
+* [Jest](https://facebook.github.io/jest/)
+* [Yarn](https://yarnpkg.com/)
+* [React Transform HMR](https://github.com/gaearon/react-transform-hmr)
+* [Apisauce](https://github.com/skellock/apisauce)
+* [Redux Saga](https://github.com/redux-saga/redux-saga)
+* [Immutable](https://github.com/facebook/immutable-js)
+* [css-modules](https://github.com/css-modules/css-modules)
 
 ## Install
 
