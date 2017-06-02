@@ -1,7 +1,3 @@
-/**
- * Build config for electron renderer process
- */
-
 import path from 'path'
 import webpack from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'

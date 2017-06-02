@@ -1,7 +1,3 @@
-/**
- * Builds the DLL for development electron renderer process
- */
-
 import webpack from 'webpack'
 import path from 'path'
 import merge from 'webpack-merge'
@@ -19,10 +15,6 @@ export default merge.smart(baseConfig, {
 
   externals: ['fsevents', 'crypto-browserify'],
 
-  /**
-   * @HACK: Copy and pasted from renderer dev config. Consider merging these
-   *        rules into the base config. May cause breaking changes.
-   */
   module: {
     rules: [
       {

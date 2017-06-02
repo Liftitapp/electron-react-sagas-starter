@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { Link } from 'react-router-dom'
-import styles from './home.css'
+import styles from 'components/home/home.css'
 
 const Home = () => (
   <div>

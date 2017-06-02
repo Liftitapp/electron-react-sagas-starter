@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "description": "Electron starter kit based on React, React redux, Redux Saga, React Router, Immutable, stateless, Webpack 2, React Hot Loader for rapid development",
   "scripts": {
-    "test": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 node --trace-warnings ./test/runTests.js && ava",
+    "test": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 node --trace-warnings ./test/runTests.js",
     "test-all": "npm run lint && npm run flow && npm run test && npm run build && npm run test-e2e",
     "test-watch": "npm test -- --watch",
     "test-e2e": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 node --trace-warnings ./test/runTests.js e2e",
@@ -114,7 +114,6 @@
   },
   "devDependencies": {
     "asar": "^0.13.0",
-    "ava": "^0.19.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.1",
@@ -176,6 +175,7 @@
     "reduxsauce": "^0.5.0",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.5",
+    "sematable": "1.5.0",
     "sinon": "^2.2.0",
     "spectron": "^3.7.0",
     "style-loader": "^0.17.0",
@@ -200,6 +200,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-hot-loader": "3.0.0-beta.6",
+    "react-pdf-js": "^1.0.35",
     "react-redux": "^5.0.4",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
