@@ -6,24 +6,24 @@ import PDF from 'react-pdf-js'
 const printPdf = () => {
   window.print()
 }
-const pdf = 'https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf'
-const PdfViewer = ({ state }) => (
+
+const PdfViewer = ({ location }) => (
   <div>
-    <Link to="/invoices">
-      <i className="fa fa-arrow-left fa-3x" />
-      <a onClick={() => printPdf(pdf)}>print</a>
+    <Link to='/invoices'>
+      <i className='fa fa-arrow-left fa-3x' />
+      <button onClick={() => printPdf()}>print</button>
     </Link>
     <div>
-      <PDF file= {pdf}/>
+      <PDF file={location.query.url} />
     </div>
   </div>
 )
 
 PdfViewer.propTypes = {
-  url: PropTypes.string.required
+  location: PropTypes.object.required
 }
 PdfViewer.defaultProps = {
-  url: ''
+  location: {}
 }
 
 export default PdfViewer

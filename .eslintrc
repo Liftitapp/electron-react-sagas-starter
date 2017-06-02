@@ -30,8 +30,9 @@
       "order": ["type-annotations", "static-methods", "lifecycle", "everything-else", "render"]
     }],
     "react/forbid-prop-types": "off",
+    "react/require-extension": "off",
     "react/jsx-no-bind": "off",
-    "react/jsx-filename-extension": ["off", { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [0, { "extensions": [".js", ".jsx"] }],
     "react/prefer-stateless-function": "off"
   },
   "plugins": [

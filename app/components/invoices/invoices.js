@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import numeral from 'numeral'
 import moment from 'moment'
@@ -43,12 +43,21 @@ const Invoices = ({ data, getInvoices }) => (
             <td>{invoice.service.type}</td>
             <td>{numeral(invoice.service.price).format('$0,0')}</td>
             <td>
-              <Link to='/pdf'>
-                <i className="fa fa-arrow-down fa-1x" />
-              </Link></td>
-            <td><Link to='/pdf'>
-              <i className="fa fa-arrow-down fa-1x" />
-            </Link></td>
+              <NavLink to={{
+                pathname: '/pdf',
+                query: { url: invoice.customer.pdf_link } }}
+              >
+                <i className='fa fa-arrow-down fa-1x' />
+              </NavLink>
+            </td>
+            <td>
+              <NavLink to={{
+                pathname: '/pdf',
+                query: { url: invoice.worker.pdf_link } }}
+              >
+                <i className='fa fa-arrow-down fa-1x' />
+              </NavLink>
+            </td>
           </tr>
         ))}
       </tbody>
