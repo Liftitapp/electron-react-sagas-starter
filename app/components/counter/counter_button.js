@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from 'components/counter/counter.css'
+import styles from './counter.css'
 
 const CounterButton = ({ onClick, counterIcon }) => (
-  <button className={styles.btn} onClick={onClick} data-tclass="btn">
+  <button className={styles.btn} onClick={onClick} data-tclass='btn'>
     <i className={`fa ${counterIcon}`} />
   </button>
 )

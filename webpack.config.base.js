@@ -21,7 +21,7 @@ export default {
   },
 
   output: {
-    path: path.resolve(__dirname, './app'),
+    path: path.join(__dirname, 'app'),
     filename: 'bundle.js',
     // https://github.com/webpack/webpack/issues/1114
     libraryTarget: 'commonjs2'
@@ -33,17 +33,12 @@ export default {
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
     modules: [
-      path.resolve(__dirname, './app'),
+      path.join(__dirname, 'app'),
       'node_modules'
     ],
   },
 
   plugins: [
-    new webpack.NamedModulesPlugin(),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        context: __dirname
-      }
-    })
+    new webpack.NamedModulesPlugin()
   ]
 }

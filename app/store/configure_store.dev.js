@@ -1,12 +1,11 @@
 import { createStore, applyMiddleware, compose } from 'redux'
-// import thunk from 'redux-thunk'
 import createSagaMiddleware from 'redux-saga'
 import { createHashHistory } from 'history'
 import { routerMiddleware, routerActions } from 'react-router-redux'
 import { createLogger } from 'redux-logger'
-import rootReducer from 'reducers'
-import rootSaga from 'sagas'
-import * as counterActions from 'reducers/counter_redux'
+import rootReducer from '../reducers'
+import rootSaga from '../sagas'
+import * as counterActions from '../reducers/counter_redux'
 
 const history = createHashHistory()
 
