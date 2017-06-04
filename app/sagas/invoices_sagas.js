@@ -1,5 +1,5 @@
 import { call, put } from 'redux-saga/effects'
-import InvoicesActions from 'reducers/invoices_redux'
+import InvoicesActions from '../reducers/invoices_redux'
 
 function* getInvoices(api: object) {
   const response = yield call(api.invoices)

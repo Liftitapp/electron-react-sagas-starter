@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import CounterButton from 'components/counter/counter_button'
-import styles from 'components/counter/counter.css'
+import CounterButton from './counter_button'
+import styles from './counter.css'
 
 const Counter = ({ decrementCounter, incrementCounter, counter }) => (
   <div>

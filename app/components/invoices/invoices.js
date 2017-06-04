@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import numeral from 'numeral'
 import moment from 'moment'
 import sematable from 'sematable'
-import PdfViewer from 'components/pdf/pdf_viewer'
+import PdfViewer from '../pdf/pdf_viewer'
 
 const columns = [
   { key: 'id', header: 'ID', searchable: true, sortable: true, primaryKey: true },

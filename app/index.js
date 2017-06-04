@@ -1,9 +1,9 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import Root from 'containers/root'
-import { configureStore, history } from 'store/configure_store'
-import 'app.global.css'
+import Root from './containers/root'
+import { configureStore, history } from './store/configure_store'
+import './app.global.css'
 
 const store = configureStore()
 
@@ -21,7 +21,7 @@ appRender(
 
 if (module.hot) {
   module.hot.accept('containers/root', () => {
-    const NextRoot = require('containers/root')
+    const NextRoot = require('containers/root') // eslint-disable-line global-require
     appRender(
       <NextRoot store={store} history={history} />
     )
