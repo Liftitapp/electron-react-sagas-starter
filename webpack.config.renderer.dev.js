@@ -1,3 +1,12 @@
+/* eslint global-require: 0, import/no-dynamic-require: 0 */
+
+/**
+ * Build config for development electron renderer process that uses
+ * Hot-Module-Replacement
+ *
+ * https://webpack.js.org/concepts/hot-module-replacement/
+ */
+
 import path from 'path'
 import fs from 'fs'
 import webpack from 'webpack'
@@ -178,7 +187,6 @@ export default merge.smart(baseConfig, {
      * https://webpack.js.org/concepts/hot-module-replacement/
      */
     new webpack.HotModuleReplacementPlugin({
-      // @TODO: Waiting on https://github.com/jantimon/html-webpack-plugin/issues/533
       // multiStep: true
     }),
 

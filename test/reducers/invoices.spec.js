@@ -1,4 +1,3 @@
-import { spy } from 'sinon'
 import invoicesActions from '../../app/reducers/invoices_redux'
 
 describe('actions', () => {

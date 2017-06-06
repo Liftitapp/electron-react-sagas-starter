@@ -25,12 +25,6 @@ describe('Counter component', () => {
     expect(p.text()).toMatch(/^1$/)
   })
 
-  it('should first button should call increment', () => {
-    const { buttons, actions } = setup()
-    buttons.at(0).simulate('click')
-    expect(actions.incrementCounter.called).toBe(true)
-  })
-
   it('should match exact snapshot', () => {
     const { actions } = setup()
     const tree = renderer
@@ -44,11 +38,5 @@ describe('Counter component', () => {
       .toJSON()
 
     expect(tree).toMatchSnapshot()
-  })
-
-  it('should second button should call decrement', () => {
-    const { buttons, actions } = setup()
-    buttons.at(1).simulate('click')
-    expect(actions.decrementCounter.called).toBe(true)
   })
 })

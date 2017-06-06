@@ -1,4 +1,3 @@
-// @flow
 import { createReducer, createActions } from 'reduxsauce'
 import { Map } from 'immutable'
 

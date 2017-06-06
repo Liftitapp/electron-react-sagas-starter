@@ -1,3 +1,7 @@
+/**
+ * Webpack config for production electron main process
+ */
+
 import webpack from 'webpack'
 import merge from 'webpack-merge'
 import BabiliPlugin from 'babili-webpack-plugin'

@@ -11,15 +11,3 @@ Object {
   "type": "INVOICES_FETCH",
 }
 `;
-
-exports[`should be success action 2`] = `
-Object {
-  "type": "INVOICES_SUCCESS",
-}
-`;
-
-exports[`should fetch action 1`] = `
-Object {
-  "type": "INVOICES_FETCH",
-}
-`;

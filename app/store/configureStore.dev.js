@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux'
-import createSagaMiddleware from 'redux-saga'
 import { createHashHistory } from 'history'
+import createSagaMiddleware from 'redux-saga'
 import { routerMiddleware, routerActions } from 'react-router-redux'
 import { createLogger } from 'redux-logger'
 import rootReducer from '../reducers'
@@ -51,14 +51,12 @@ const configureStore = (initialState) => {
   // Create Store
   const store = createStore(rootReducer, initialState, enhancer)
 
-
   if (module.hot) {
-    module.hot.accept('reducers', () =>
-      store.replaceReducer(require('reducers')) // eslint-disable-line global-require
+    module.hot.accept('../reducers', () =>
+      store.replaceReducer(require('../reducers')) // eslint-disable-line global-require
     )
   }
   sagaMiddleware.run(rootSaga)
-
   return store
 }
 

@@ -1,10 +1,16 @@
+// @flow
 import React from 'react'
 import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
 import CounterButton from './counter_button'
 import styles from './counter.css'
 
-const Counter = ({ decrementCounter, incrementCounter, counter }) => (
+type Props = {
+  incrementCounter: () => void,
+  decrementCounter: () => void,
+  counter: number
+};
+
+const Counter = ({ decrementCounter, incrementCounter, counter }: Props) => (
   <div>
     <div className={styles.backButton} data-tid='backButton'>
       <Link to='/'>
@@ -21,14 +27,4 @@ const Counter = ({ decrementCounter, incrementCounter, counter }) => (
   </div>
 )
 
-Counter.propTypes = {
-  incrementCounter: PropTypes.func,
-  decrementCounter: PropTypes.func,
-  counter: PropTypes.number
-}
-Counter.defaultProps = {
-  incrementCounter: () => {},
-  decrementCounter: () => {},
-  counter: 0
-}
 export default Counter

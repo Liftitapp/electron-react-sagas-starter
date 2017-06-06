@@ -1,10 +1,9 @@
+// @flow
 import React from 'react'
 import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
 import numeral from 'numeral'
 import moment from 'moment'
 import sematable from 'sematable'
-import PdfViewer from '../pdf/pdf_viewer'
 
 const columns = [
   { key: 'id', header: 'ID', searchable: true, sortable: true, primaryKey: true },
@@ -14,10 +13,15 @@ const columns = [
 const textHeaders = [
   'UUID', 'Factura', 'Fecha', 'Cliente', 'Operador', 'Tipo', 'Valor', 'PDF Cliente', 'PDF Operador']
 
-const Invoices = ({ data, getInvoices }) => (
+type Props = {
+  data: [],
+  getInvoices: () => void
+};
+
+const Invoices = ({ data, getInvoices }: Props) => (
   <div>
-    <Link to="/">
-      <i className="fa fa-arrow-left fa-3x" />
+    <Link to='/'>
+      <i className='fa fa-arrow-left fa-3x' />
     </Link>
     <button onClick={getInvoices}>bring data</button>
     {data.length > 0 &&
@@ -43,11 +47,11 @@ const Invoices = ({ data, getInvoices }) => (
             <td>{invoice.service.type}</td>
             <td>{numeral(invoice.service.price).format('$0,0')}</td>
             <td>
-              <Link to='/pdf'>
-                <i className="fa fa-arrow-down fa-1x" />
+              <Link to='/'>
+                <i className='fa fa-arrow-down fa-1x' />
               </Link></td>
-            <td><Link to='/pdf'>
-              <i className="fa fa-arrow-down fa-1x" />
+            <td><Link to='/'>
+              <i className='fa fa-arrow-down fa-1x' />
             </Link></td>
           </tr>
         ))}
@@ -55,14 +59,5 @@ const Invoices = ({ data, getInvoices }) => (
     </table>}
   </div>
 )
-
-Invoices.propTypes = {
-  data: PropTypes.array, // eslint-disable-line react/forbid-prop-types
-  getInvoices: PropTypes.func
-}
-Invoices.defaultProps = {
-  data: [],
-  getInvoices: () => {}
-}
 
 export default sematable('allApps', Invoices, columns)
