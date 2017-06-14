@@ -76,10 +76,17 @@
     "url": "git+https://github.com/Liftitapp/electron-react-sagas-starter.git"
   },
   "author": {
-    "name": "C. T. Lin",
-    "email": "punkeneto1@gmail.com",
-    "url": "https://github.com/johanetox"
+    "name": "Liftit",
+    "email": "dev@liftit.co",
+    "url": "https://github.com/Liftitapp"
   },
+  "contributors" : [
+    {
+      "name": "Johan Méndez",
+      "email": "punkeneto1@gmail.com",
+      "url": "https://github.com/johanetox"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Liftitapp/electron-react-sagas-starter/issues"
