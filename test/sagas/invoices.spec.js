@@ -1,14 +1,28 @@
-import { call } from 'redux-saga/effects'
-import API from '../../app/services/api'
-import { getInvoices } from '../../app/sagas/invoices_sagas'
-// import InvoicesActions from '../../app/reducers/invoices_redux'
+import sagaHelper from 'redux-saga-testing'
+import { call, put } from 'redux-saga/effects'
+import InvoicesActions from '../../app/reducers/invoices_redux'
 
-const stepper = (fn) => (mock) => fn.next(mock).value
-const api = API.create()
-// const response = yield call(api.invoices)
-describe('nivoices saga', () => {
-  it('Api request', () => {
-    const step = stepper(getInvoices(api))
-    expect(step(), call(api.invoices))
+const api = jest.fn()
+const fetchAction = () => ({ type: 'INVOICES_SUCCESS' })
+
+function* getInvoices() {
+  yield call(api)
+  yield put(fetchAction())
+}
+
+describe('Testing Invoice Saga', () => {
+  const it = sagaHelper(getInvoices())
+
+  it('should have called the mock API first', result => {
+    expect(result).toEqual(call(api))
+    expect(api).not.toHaveBeenCalled()
+  })
+
+  it('and then trigger an action', result => {
+    expect(result).toEqual(put(InvoicesActions.invoicesSuccess()))
+  })
+
+  it('and then nothing', result => {
+    expect(result).toBeUndefined()
   })
 })

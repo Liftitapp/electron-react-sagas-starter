@@ -1,4 +1,3 @@
-import { spy } from 'sinon'
 import counterActions from '../../app/reducers/counter_redux'
 
 describe('actions', () => {

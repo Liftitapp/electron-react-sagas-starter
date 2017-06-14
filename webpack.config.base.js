@@ -1,8 +1,10 @@
+/**
+ * Base webpack config used across other specific configs
+ */
+
 import path from 'path'
 import webpack from 'webpack'
-// import project from './app/config/project.config'
 import { dependencies as externals } from './app/package.json'
-
 
 export default {
   externals: Object.keys(externals || {}),
@@ -34,7 +36,7 @@ export default {
     extensions: ['.js', '.jsx', '.json'],
     modules: [
       path.join(__dirname, 'app'),
-      'node_modules'
+      'node_modules',
     ],
   },
 

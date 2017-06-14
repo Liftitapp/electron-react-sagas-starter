@@ -1,13 +1,17 @@
+// @flow
 import React from 'react'
 import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
 import PDF from 'react-pdf-js'
 
 const printPdf = () => {
   window.print()
 }
 
-const PdfViewer = ({ location }) => (
+type Props = {
+  location: {}
+};
+
+const PdfViewer = ({ location }: Props) => (
   <div>
     <Link to='/invoices'>
       <i className='fa fa-arrow-left fa-3x' />
@@ -18,12 +22,5 @@ const PdfViewer = ({ location }) => (
     </div>
   </div>
 )
-
-PdfViewer.propTypes = {
-  location: PropTypes.object.required
-}
-PdfViewer.defaultProps = {
-  location: {}
-}
 
 export default PdfViewer

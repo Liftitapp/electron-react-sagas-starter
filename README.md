@@ -1,12 +1,9 @@
 # electron-react-sagas-starter
 
 ### An actual work from [chentsulin/electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate) + sagas, immutable and stateless components
-
-<br/>
-
-[![Join their chat at https://gitter.im/electron-react-boilerplate/Lobby](https://badges.gitter.im/electron-react-boilerplate/Lobby.svg)](https://gitter.im/electron-react-boilerplate/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-<br/>
+###
+###
+[![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/Liftitapp/electron-react-sagas-starter) [![Build Status](https://semaphoreci.com/api/v1/liftit/electron-react-sagas-starter/branches/master/badge.svg)](https://semaphoreci.com/liftit/electron-react-sagas-starter) [![Join their chat at https://gitter.im/electron-react-boilerplate/Lobby](https://badges.gitter.im/electron-react-boilerplate/Lobby.svg)](https://gitter.im/electron-react-boilerplate/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Application boilerplate based on
 * [Electron](http://electron.atom.io/)
