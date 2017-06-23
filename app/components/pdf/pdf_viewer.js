@@ -8,7 +8,11 @@ const printPdf = () => {
 }
 
 type Props = {
-  location: {}
+  location: {
+    query: {
+      url: string
+    }
+  }
 };
 
 const PdfViewer = ({ location }: Props) => (

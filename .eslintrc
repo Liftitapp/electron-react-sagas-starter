@@ -10,6 +10,7 @@
     "node": true
   },
   "rules": {
+    "react/no-unused-prop-types": 0,
     "semi": [ 2, "never"],
     "arrow-parens": ["off"],
     "compat/compat": "error",
@@ -47,10 +48,6 @@
     "react"
   ],
   "settings": {
-    "import/resolver": {
-      "webpack": {
-        "config": "webpack.config.eslint.js"
-      }
-    }
+    "import/resolver": "webpack"
   }
 }
