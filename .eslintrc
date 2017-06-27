@@ -10,6 +10,7 @@
     "node": true
   },
   "rules": {
+    "react/no-unused-prop-types": 0,
     "semi": [ 2, "never"],
     "arrow-parens": ["off"],
     "compat/compat": "error",
@@ -33,8 +34,9 @@
     }],
     "jsx-quotes": ["error", "prefer-single"],
     "react/forbid-prop-types": "off",
+    "react/require-extension": "off",
     "react/jsx-no-bind": "off",
-    "react/jsx-filename-extension": ["off", { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [0, { "extensions": [".js", ".jsx"] }],
     "react/prefer-stateless-function": "off"
   },
   "plugins": [
@@ -46,10 +48,6 @@
     "react"
   ],
   "settings": {
-    "import/resolver": {
-      "webpack": {
-        "config": "webpack.config.eslint.js"
-      }
-    }
+    "import/resolver": "webpack"
   }
 }
